@@ -1,0 +1,18 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+        <item name="android:actionModeCloseButtonStyle">@style/NoCloseButton</item>
+
+    </style>
+
+    <style name="NoCloseButton" parent="@android:style/Widget.ActionButton.CloseMode">
+        <item name="android:visibility">invisible</item>
+    </style>
+
+
+    <style name="ActionBar" parent="android:Widget.ActionBar">
+        <item name="android:background">#374C8c</item>
+        <item name="android:icon">@android:color/transparent</item>
+    </style>
+</resources>
