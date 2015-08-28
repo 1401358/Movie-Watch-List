@@ -1,12 +1,10 @@
-package sampleactivities.metropolia.org.movielist;
-
-import android.support.v7.app.AppCompatActivity;
+package com.a1401358.movielist;
+import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends Activity {
     private MovieListAdapater movieListAdapater;
 
     @Override

@@ -1,4 +1,4 @@
-package sampleactivities.metropolia.org.movielist;
+package com.a1401358.movielist;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

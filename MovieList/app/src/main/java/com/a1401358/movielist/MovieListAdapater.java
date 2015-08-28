@@ -1,4 +1,4 @@
-package sampleactivities.metropolia.org.movielist;
+package com.a1401358.movielist;
 
 import android.view.LayoutInflater;
 import android.view.View;
