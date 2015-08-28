@@ -4,6 +4,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.a1401358.model.Movie;
 
@@ -34,9 +36,30 @@ public class MovieListAdapater extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        Movie movie = movieList.get(position);
         if (convertView == null) {
+            final ViewHolder movieHolder = new ViewHolder();
             convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_item_layout, parent, false);
+            movieHolder.thumbnail = (ImageView)convertView.findViewById(R.id.thumbnail);
+            movieHolder.title = (TextView)convertView.findViewById(R.id.title);
+            convertView.setTag(movieHolder);
         }
+        final ViewHolder  movieHolder = (ViewHolder)convertView.getTag();
+        movieHolder.title.setText(movie.title);
         return convertView;
+    }
+
+    private static class ViewHolder{
+        private ImageView thumbnail,deleteIcon;
+        private TextView title,director,genres,actors;
+
+    }
+
+
+
+    public void addItems(List<Movie> items){
+        movieList.addAll(items);
+        notifyDataSetChanged();
+
     }
 }
