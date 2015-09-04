@@ -28,6 +28,5 @@
         <!-- tab indicator -->
         <item name="android:background">#374C8c</item>
         <item name="android:icon">@android:color/transparent</item>
-
     </style>
 </resources>
