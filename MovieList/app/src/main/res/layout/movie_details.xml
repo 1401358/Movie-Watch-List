@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
-            android:id="@+id/textView2"
+            android:id="@+id/title"
             android:layout_marginLeft="4dp" />
     </LinearLayout>
 
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
-            android:id="@+id/textView4"
+            android:id="@+id/director"
             android:layout_marginLeft="4dp" />
     </LinearLayout>
 
@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
-            android:id="@+id/textView6"
+            android:id="@+id/generes"
             android:layout_marginLeft="4dp" />
     </LinearLayout>
 
@@ -117,7 +117,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
-            android:id="@+id/textView8"
+            android:id="@+id/actors"
             android:layout_marginLeft="4dp" />
     </LinearLayout>
 
