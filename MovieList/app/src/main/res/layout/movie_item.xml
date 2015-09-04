@@ -137,8 +137,9 @@
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/delete"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:background="#FFFFFF"
-            android:layout_marginRight="1dp" />
+            android:background="#5A92FF"
+            android:layout_marginRight="1dp"
+            android:textColor="#ffffff" />
         <TextView
             android:id="@+id/creatEvent"
             android:layout_width="match_parent"
@@ -148,7 +149,8 @@
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/create_event"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:background="#FFFFFF" />
+            android:background="#5A92FF"
+            android:textColor="#ffffff" />
        </LinearLayout>
 
 
