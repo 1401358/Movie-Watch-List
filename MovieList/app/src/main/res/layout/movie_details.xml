@@ -7,7 +7,8 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:src="@drawable/two"
-        android:id="@+id/imageView" />
+        android:id="@+id/imageView"
+        android:layout_marginTop="2dp" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -25,8 +26,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Title"
-            android:id="@+id/textView" />
+            android:text="@string/Title"
+            android:id="@+id/textView"
+            android:singleLine="false" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -34,7 +36,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
             android:id="@+id/title"
-            android:layout_marginLeft="4dp" />
+            android:layout_marginLeft="6dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -53,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Ditector"
+            android:text="@string/Director"
             android:id="@+id/textView3" />
 
         <TextView
@@ -62,7 +64,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
             android:id="@+id/director"
-            android:layout_marginLeft="4dp" />
+            android:layout_marginLeft="6dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -81,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="genre"
+            android:text="@string/Genre"
             android:id="@+id/textView5" />
 
         <TextView
@@ -90,7 +92,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
             android:id="@+id/generes"
-            android:layout_marginLeft="4dp" />
+            android:layout_marginLeft="6dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -109,7 +111,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
+            android:text="@string/Actors"
             android:id="@+id/textView7" />
 
         <TextView
@@ -118,7 +120,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Medium Text"
             android:id="@+id/actors"
-            android:layout_marginLeft="4dp" />
+            android:layout_marginLeft="6dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -136,7 +138,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Location Watched"
+            android:text="@string/Location_Watched"
             android:id="@+id/textView9" />
 
         <TextView

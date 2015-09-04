@@ -4,4 +4,15 @@
     <string name="cancel">Cancel</string>
     <string name="delete">Delete</string>
     <string name="create_event">Create Event</string>
+    <string name="title">Title:</string>
+    <string name="director">Director:</string>
+    <string name="genre">Genre:</string>
+    <string name="actors">Actors:</string>
+    <string name="location_Watched">Location Watched:</string>
+    <string name="enter_title">Enter Title</string>
+    <string name="enter_director">Enter Director</string>
+    <string name="enter_genre">Enter Genre</string>
+    <string name="enter_actors">Enter Actors</string>
+    <string name="enter_location">Location Watched</string>
+
 </resources>
