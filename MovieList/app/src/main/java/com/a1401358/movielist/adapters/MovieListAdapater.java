@@ -42,7 +42,7 @@ public class MovieListAdapater extends BaseAdapter {
             final ViewHolder movieHolder = new ViewHolder();
             convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_item_layout, parent, false);
             movieHolder.thumbnail = (ImageView) convertView.findViewById(R.id.thumbnail);
-            movieHolder.title = (TextView) convertView.findViewById(R.id.title);
+            movieHolder.title = (TextView) convertView.findViewById(R.id.movieTitle);
             convertView.setTag(movieHolder);
         }
         final ViewHolder movieHolder = (ViewHolder) convertView.getTag();

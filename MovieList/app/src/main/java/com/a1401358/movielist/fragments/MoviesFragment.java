@@ -2,6 +2,7 @@ package com.a1401358.movielist.fragments;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,10 +60,14 @@ public class MoviesFragment extends Fragment implements MovieListDao.OnMovieList
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.addItem:
-                Movie movie = new Movie();
-                movie.title = "Movie Title"+movieListAdapater.getCount();
-                MovieListDao.getInstance().addMovie(movie);
+                confirmFireMissiles();
                 break;
         }
     }
+
+    public void confirmFireMissiles() {
+        DialogFragment newFragment = new CreateMovieFragmet();
+        newFragment.show(getChildFragmentManager(), "missiles");
+    }
+
 }
