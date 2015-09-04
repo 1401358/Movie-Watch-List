@@ -19,7 +19,8 @@
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginTop="16dp"
-        android:inputType="text" />
+        android:inputType="text"
+        android:hint="@string/enter_title" />
 
     <EditText
         android:id="@+id/director"
@@ -30,7 +31,8 @@
         android:layout_marginRight="4dp"
         android:layout_marginTop="4dp"
         android:fontFamily="sans-serif"
-        android:inputType="text" />
+        android:inputType="text"
+        android:hint="@string/enter_director" />
 
     <EditText
         android:id="@+id/genres"
@@ -40,7 +42,8 @@
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginTop="16dp"
-        android:inputType="text" />
+        android:inputType="text"
+        android:hint="@string/enter_genre" />
 
     <EditText
         android:id="@+id/actors"
@@ -51,5 +54,6 @@
         android:layout_marginRight="4dp"
         android:layout_marginTop="4dp"
         android:fontFamily="sans-serif"
-        android:inputType="text" />
+        android:inputType="text"
+        android:hint="@string/enter_actors" />
 </LinearLayout>
