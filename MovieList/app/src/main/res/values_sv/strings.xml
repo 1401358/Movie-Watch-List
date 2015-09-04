@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Film Lista</string>
+    <string name="save">Spara</string>
+    <string name="cancel">Annullera</string>
+    <string name="delete">Radera</string>
+    <string name="create_event">Skapa händelse</string>
+    <string name="title">Titel:</string>
+    <string name="director">Direktör:</string>
+    <string name="genre">Genre:</string>
+    <string name="actors">Skådespelare:</string>
+    <string name="location_Watched">Läge Såg:</string>
+    <string name="enter_title">Ange Titel</string>
+    <string name="enter_director">Ange Regi</string>
+    <string name="enter_genre">Ange Genre</string>
+    <string name="enter_actors">Ange Skådespelare</string>
+    <string name="enter_location">Läge Såg</string>
+
+</resources>

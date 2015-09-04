@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Elokova Lista</string>
+    <string name="save">Säästää</string>
+    <string name="cancel">Peruuttaa</string>
+    <string name="delete">Poista</string>
+    <string name="create_event">Luoda Tapahtuma</string>
+    <string name="title">Otsikko:</string>
+    <string name="director">Johtaja:</string>
+    <string name="genre">Laji:</string>
+    <string name="actors">näyttelijä:</string>
+    <string name="location_Watched">Sijainti Katselin:</string>
+    <string name="enter_title">Kirjoita otsikko</string>
+    <string name="enter_director">Anna johtaja</string>
+    <string name="enter_genre">Anna Genre</string>
+    <string name="enter_actors">Anna Näyttelijät</string>
+    <string name="enter_location">Sijainti Katselin</string>
+
+</resources>
