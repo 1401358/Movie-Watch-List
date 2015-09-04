@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Movie List</string>
+    <color name="light_blue">#5A92FF</color>
+
 </resources>

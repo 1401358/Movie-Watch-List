@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <item name="android:actionBarStyle">@style/ActionBar</item>
         <item name="android:actionModeCloseButtonStyle">@style/NoCloseButton</item>
-
+        <item name="android:actionBarTabStyle">@style/MyActionBarTabs</item>
     </style>
 
     <style name="NoCloseButton" parent="@android:style/Widget.ActionButton.CloseMode">
@@ -12,7 +13,21 @@
 
 
     <style name="ActionBar" parent="android:Widget.ActionBar">
+        <item name="android:background">@color/light_blue</item>
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+        <item name="android:icon">@android:color/transparent</item>
+    </style>
+
+    <style name="MyActionBarTitleText"
+        parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="MyActionBarTabs"
+        parent="android:Widget.ActionBar.TabView">
+        <!-- tab indicator -->
         <item name="android:background">#374C8c</item>
         <item name="android:icon">@android:color/transparent</item>
+
     </style>
 </resources>
