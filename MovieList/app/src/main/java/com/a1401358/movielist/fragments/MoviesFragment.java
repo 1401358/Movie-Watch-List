@@ -15,7 +15,7 @@ import com.a1401358.movielist.R;
 import com.a1401358.movielist.adapters.MovieListAdapater;
 
 
-public class MoviesFragment extends Fragment implements MovieListDao.OnMovieListChangeListener, View.OnClickListener {
+public class MoviesFragment extends Fragment implements MovieListDao.OnMovieListChangeListener, View.OnClickListener, MovieListAdapater.OnShowMovieEventDialog {
     private MovieListAdapater movieListAdapater;
 
     @Override
@@ -31,6 +31,7 @@ public class MoviesFragment extends Fragment implements MovieListDao.OnMovieList
         ListView movieList = (ListView) view.findViewById(R.id.listView);
         view.findViewById(R.id.addItem).setOnClickListener(this);
         movieList.setAdapter(movieListAdapater);
+        movieListAdapater.setOnShowMovieEventDialog(this);
     }
 
     @Override
@@ -54,6 +55,8 @@ public class MoviesFragment extends Fragment implements MovieListDao.OnMovieList
     public void onDetach() {
         super.onDetach();
         MovieListDao.getInstance().setOnMovieListChangeListener(null);
+        if (movieListAdapater != null)
+            movieListAdapater.setOnShowMovieEventDialog(null);
     }
 
     @Override
@@ -67,7 +70,18 @@ public class MoviesFragment extends Fragment implements MovieListDao.OnMovieList
 
     public void confirmFireMissiles() {
         DialogFragment newFragment = new CreateMovieFragmet();
-        newFragment.show(getChildFragmentManager(), "missiles");
+        newFragment.show(getChildFragmentManager(), "movie");
     }
 
+    @Override
+    public void showDialog(Movie movie) {
+        Bundle movieBundle = new Bundle();
+        movieBundle.putString("title", movie.title);
+        movieBundle.putString("director", movie.director);
+        movieBundle.putString("actors", movie.actors);
+        movieBundle.putString("genres", movie.genres);
+        DialogFragment newFragment = new CreateMovieEventFragmet();
+        newFragment.setArguments(movieBundle);
+        newFragment.show(getChildFragmentManager(), "event");
+    }
 }

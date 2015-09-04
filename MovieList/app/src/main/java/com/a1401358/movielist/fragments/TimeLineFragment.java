@@ -11,18 +11,17 @@ import android.widget.ListView;
 import com.a1401358.daos.MovieListDao;
 import com.a1401358.daos.MovieListDao.OnEventListChangeListener;
 import com.a1401358.model.Event;
-import com.a1401358.model.Movie;
 import com.a1401358.movielist.R;
 import com.a1401358.movielist.adapters.TimeLineAdapater;
 
 
-public class TimeLineFragment extends Fragment implements OnEventListChangeListener,View.OnClickListener{
+public class TimeLineFragment extends Fragment implements OnEventListChangeListener{
     TimeLineAdapater timeLineAdapater;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.list_layout, container, false);
+        return inflater.inflate(R.layout.eventlist_layout, container, false);
     }
 
     @Override
@@ -30,7 +29,6 @@ public class TimeLineFragment extends Fragment implements OnEventListChangeListe
         super.onViewCreated(view, savedInstanceState);
         timeLineAdapater = new TimeLineAdapater();
         ListView movieList = (ListView) view.findViewById(R.id.listView);
-        view.findViewById(R.id.addItem).setOnClickListener(this);
         movieList.setAdapter(timeLineAdapater);
     }
 
@@ -56,19 +54,5 @@ public class TimeLineFragment extends Fragment implements OnEventListChangeListe
     public void onDetach() {
         super.onDetach();
         MovieListDao.getInstance().setOnEventListChangeListener(null);
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.addItem:
-                Movie movie = new Movie();
-                movie.title = "Movie Title"+timeLineAdapater.getCount();
-                Event event = new Event();
-                event.location = "Location "+timeLineAdapater.getCount();
-                event.movie = movie;
-                MovieListDao.getInstance().addEvent(event);
-                break;
-        }
     }
 }

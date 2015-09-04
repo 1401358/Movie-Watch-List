@@ -40,23 +40,42 @@ public class TimeLineAdapater extends BaseAdapter {
         Event event = movieList.get(position);
         if (convertView == null) {
             final ViewHolder movieHolder = new ViewHolder();
-            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_item_layout, parent, false);
-            movieHolder.thumbnail = (ImageView)convertView.findViewById(R.id.thumbnail);
+            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_event, parent, false);
+            movieHolder.location = (TextView)convertView.findViewById(R.id.location);
             movieHolder.title = (TextView)convertView.findViewById(R.id.title);
+            movieHolder.director = (TextView) convertView.findViewById(R.id.director);
+            movieHolder.genres = (TextView) convertView.findViewById(R.id.generes);
+            movieHolder.actors = (TextView) convertView.findViewById(R.id.actors);
+            movieHolder.delete = (TextView) convertView.findViewById(R.id.delete);
             convertView.setTag(movieHolder);
         }
         final ViewHolder  movieHolder = (ViewHolder)convertView.getTag();
-        movieHolder.title.setText(event.location);
+        movieHolder.location.setText(event.location);
+        movieHolder.title.setText(event.movie.title);
+        movieHolder.director.setText(event.movie.director);
+        movieHolder.genres.setText(event.movie.genres);
+        movieHolder.actors.setText(event.movie.actors);
+        movieHolder.delete.setTag(event);
+        movieHolder.delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                removeMovie((Event)v.getTag());
+            }
+        });
         return convertView;
     }
 
     private static class ViewHolder{
         private ImageView thumbnail,deleteIcon;
-        private TextView title,director,genres,actors;
+        private TextView location,title,director,genres,actors,delete;
 
     }
 
 
+    public void removeMovie(Event event) {
+        movieList.remove(event);
+        notifyDataSetChanged();
+    }
 
     public void addItems(List<Event> items){
         movieList.addAll(items);
@@ -68,4 +87,6 @@ public class TimeLineAdapater extends BaseAdapter {
         movieList.add(event);
         notifyDataSetChanged();
     }
+
+
 }
