@@ -25,7 +25,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Title"
+            android:text="@string/title"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
@@ -53,7 +53,7 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ditector"
+            android:text="@string/director"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
@@ -81,7 +81,7 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="genre"
+            android:text="@string/genre"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
@@ -109,7 +109,7 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Medium Text"
+            android:text="@string/actors"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
